@@ -18,6 +18,7 @@ class HousesController < ApplicationController
 
   # GET /houses/1/edit
   def edit
+    @house.stations.build
   end
 
   # POST /houses or /houses.json
@@ -66,6 +67,6 @@ class HousesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def house_params
 
-      params.require(:house).permit(:name, :rent, :address, :age,:note,stations_attributes: [:route, :station_name, :time ])
+      params.require(:house).permit(:name, :rent, :address, :age,:note,stations_attributes: [:route, :station_name, :time, :id ])
     end
 end
