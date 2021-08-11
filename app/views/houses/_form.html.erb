@@ -38,19 +38,20 @@
 
     <%= form.fields_for :stations do |station| %>
     <h2>最寄駅<%= station.index + 1 %></h2>
+
     <div class="field">
       <%= station.label :route,"路線名" %>
-      <%= form.text_field :route %>
+      <%= station.text_field :route %>
     </div>
 
     <div class="field">
       <%= station.label :station_name,"駅名" %>
-      <%= form.text_field :station_name %>
+      <%= station.text_field :station_name %>
     </div>
 
     <div class="field">
       <%= station.label :time,"徒歩分数" %>
-      <%= form.text_field :time %>
+      <%= station.text_field :time %>
     </div>
   <% end %>
   <div class="actions">
